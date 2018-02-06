@@ -1,0 +1,6 @@
+framework module Pods_TheProfaneEarth {
+  umbrella header "Pods-TheProfaneEarth-umbrella.h"
+
+  export *
+  module * { export * }
+}

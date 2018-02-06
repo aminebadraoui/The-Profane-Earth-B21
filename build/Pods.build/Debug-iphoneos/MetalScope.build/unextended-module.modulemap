@@ -1,0 +1,10 @@
+framework module MetalScope {
+  umbrella header "MetalScope-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MetalScope.__Swift {
+    exclude header "MetalScope-Swift.h"
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>Speaker</key>
+		<string></string>
+		<key>Title</key>
+		<string>Memories Of Louisiana</string>
+		<key>Room</key>
+		<string>14039</string>
+		<key>Background</key>
+		<string>MEMORIES OF LOUISIANA</string>
+	</dict>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>Speaker</key>
+		<string></string>
+		<key>Title</key>
+		<string>Memories Of My Father</string>
+		<key>Room</key>
+		<string>13873</string>
+		<key>Background</key>
+		<string>MEMORIES OF MY FATHER</string>
+	</dict>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>Speaker</key>
+		<string></string>
+		<key>Title</key>
+		<string>Birds Of Braille</string>
+		<key>Room</key>
+		<string>13872</string>
+		<key>Background</key>
+		<string> BIRDS OF BRAILLE</string>
+	</dict>
+</array>
+</plist>
