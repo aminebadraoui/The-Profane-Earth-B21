@@ -2,9 +2,10 @@
 //  VideoBG.swift
 //  TheProfaneEarth
 //
-//  Created by Amine Badraoui on 2018-01-13.
-//  Copyright © 2018 VamshiKrishna. All rights reserved.
+//  Created by Amine Badraoui on 2018-02-06.
+//  Copyright © 2018 aminebadraoui. All rights reserved.
 //
+
 
 import Foundation
 import AVFoundation

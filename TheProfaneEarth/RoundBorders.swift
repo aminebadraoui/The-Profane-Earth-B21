@@ -1,10 +1,11 @@
 //
 //  RoundBorders.swift
-//  ExpandingCollectionView
+//  TheProfaneEarth
 //
-//  Created by Amine Badraoui on 2017-10-30.
-//  Copyright © 2017 VamshiKrishna. All rights reserved.
+//  Created by Amine Badraoui on 2018-02-06.
+//  Copyright © 2018 aminebadraoui. All rights reserved.
 //
+
 
 import UIKit
 @IBDesignable
