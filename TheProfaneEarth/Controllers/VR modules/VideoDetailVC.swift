@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Hero
 
 
 class PlayVCSecond: UIViewController {
@@ -15,19 +16,35 @@ class PlayVCSecond: UIViewController {
     var selectedVideo : Inspiration!
 
     @IBOutlet weak var imageBg: UIImageView!
-    @IBAction func backButn(_ sender: Any) {
-        dismiss(animated: false, completion: nil)
-    }
+ 
     @IBOutlet weak var videoTitle: UILabel!
     
-  
+    @IBOutlet weak var line: UIView!
     
+  
+    @IBOutlet weak var excerpt: UILabel!
+    
+    @IBOutlet weak var playbtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
 videoTitle.text = selectedVideo.title
+       
         imageBg.image = selectedVideo.backgroundImage
+        imageBg.hero.id = selectedVideo.id
+        
         imageBg.addBlurEffect()
         
+        videoTitle.alpha = 0.0
+        excerpt.alpha = 0.0
+        line.alpha = 0.0
+        playbtn.alpha = 0.0
+        
+        if(Language.lang == Lang.English){
+           excerpt.text = VideoDesc.EXCERPT_ENG
+        } else {
+            excerpt.text = VideoDesc.EXCERPT_FR
+        }
    
         
         
@@ -40,6 +57,10 @@ videoTitle.text = selectedVideo.title
         //AppUtility.lockOrientation(.portrait)
         // Or to rotate and lock
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
+        videoTitle.fadeIn()
+        excerpt.fadeIn()
+        line.fadeIn()
+        playbtn.fadeIn()
         
     }
 
@@ -50,6 +71,7 @@ videoTitle.text = selectedVideo.title
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        let destination = segue.destination as! ChoiceVC
+        
         destination.selectedVideo = selectedVideo
        
     }
@@ -63,8 +85,12 @@ videoTitle.text = selectedVideo.title
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func viewWillDisappear(_ animated: Bool) {
+         videoTitle.fadeOut()
+    }
 }
+
+
 class Colors {
     let colorTop = UIColor(red: 192.0/255.0, green: 38.0/255.0, blue: 42.0/255.0, alpha: 1.0)
     let colorBottom = UIColor(red: 35.0/255.0, green: 2.0/255.0, blue: 2.0/255.0, alpha: 1.0)
@@ -78,3 +104,5 @@ class Colors {
     }
  
 }
+
+

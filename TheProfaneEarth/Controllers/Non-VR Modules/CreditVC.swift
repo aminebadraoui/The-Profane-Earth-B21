@@ -29,7 +29,7 @@ class CreditVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mp4")
+        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mov")
         player = AVPlayer.init(url: url!)
         
         playerLayer = AVPlayerLayer(player: player)

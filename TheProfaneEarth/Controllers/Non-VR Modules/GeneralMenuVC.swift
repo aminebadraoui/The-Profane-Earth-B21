@@ -18,6 +18,9 @@ class GeneralMenuVC: UIViewController {
     @IBOutlet weak var menuStack: UIStackView!
     @IBOutlet weak var titleStack: UIStackView!
     
+    @IBOutlet weak var byLabel: UILabel!
+    @IBOutlet weak var profaneTitle: UILabel!
+    
     @IBOutlet weak var introBtn: UIButton!
     
     @IBOutlet weak var poemBtn: UIButton!
@@ -29,14 +32,16 @@ class GeneralMenuVC: UIViewController {
   
     @IBOutlet weak var vrBtn: UIButton!
   
+    @IBOutlet weak var aboutBtn: UIButton!
     
+    @IBOutlet weak var contactBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         menuStack.alpha = 0
         titleStack.alpha = 0
         
-        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mp4")
+        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mov")
         player = AVPlayer.init(url: url!)
         
         playerLayer = AVPlayerLayer(player: player)
@@ -45,24 +50,35 @@ class GeneralMenuVC: UIViewController {
         
         player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
         
-        player.play()
+        
         
         view.layer.insertSublayer(playerLayer, at: 0)
         
+        NotificationCenter.default.addObserver(self,selector: #selector(resetPlayer),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.player.currentItem) // Add observer
         
         
         if(Language.lang == .English){
+            profaneTitle.text = Credit.OLLIVIER_CREDIT_ENG
+            byLabel.text = Credit.BY_Eng
+            
             introBtn.setTitle(Menu.INTRO_ENG, for: .normal)
             poemBtn.setTitle(Menu.POEM_ENG, for: .normal)
             vrBtn.setTitle(Menu.VR_ENG, for: .normal)
             creditsBtn.setTitle(Menu.CREDIT_ENG, for: .normal)
+            aboutBtn.setTitle(Menu.ABOUT_ENG, for: .normal)
+            contactBtn.setTitle(Menu.CONTACT_ENG, for: .normal)
             
         }
         else {
+            profaneTitle.text = Credit.OLLIVIER_CREDIT_FR
+            byLabel.text = Credit.BY_FR
             introBtn.setTitle(Menu.INTRO_FR, for: .normal)
             poemBtn.setTitle(Menu.POEM_FR, for: .normal)
             vrBtn.setTitle(Menu.VR_FR, for: .normal)
             creditsBtn.setTitle(Menu.CREDIT_FR, for: .normal)
+              aboutBtn.setTitle(Menu.ABOUT_FR, for: .normal)
+            contactBtn.setTitle(Menu.CONTACT_FR, for: .normal)
+            
         }
    
         titleStack.fadeIn(completion: {
@@ -84,10 +100,14 @@ class GeneralMenuVC: UIViewController {
         
   
     }
+    func resetPlayer() {
+        self.player.seek(to: kCMTimeZero)
+        self.player.play()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        player.play()
      
         
        

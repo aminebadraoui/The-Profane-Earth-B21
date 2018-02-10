@@ -14,10 +14,12 @@ class OmniThreeSixty: UIViewController, VRPlayerDelegate {
     
     
     @IBOutlet weak var player: VRPlayer!
+    var selectedVideo : Inspiration!
     
     func playerLoaded(_ player: VRPlayer, withMaximumQuality maximum: Int, andCurrentQuality current: Quality, andCardboardMode mode: Mode) {
         player.cardboard = .Off
         player.play()
+
         
     }
     
@@ -30,7 +32,9 @@ class OmniThreeSixty: UIViewController, VRPlayerDelegate {
     }
     
     func playerEnded(_ player: VRPlayer) {
-        
+        var viewControllers = navigationController?.viewControllers
+        viewControllers?.removeLast(3) // views to pop
+        navigationController?.setViewControllers(viewControllers!, animated: true)
     }
     
     func playerSkipped(_ player: VRPlayer) {
@@ -92,7 +96,7 @@ class OmniThreeSixty: UIViewController, VRPlayerDelegate {
         // Do any additional setup after loading the view.
         player.delegate = self
         // Load a content
-        player.load(withContentID: 13216) // Replace with your Content ID
+        player.load(withContentID: UInt32(selectedVideo.room)!) // Replace with your Content ID
          AppUtility.lockOrientation(.landscape, andRotateTo: .landscapeLeft)
      
        
@@ -115,6 +119,7 @@ class OmniThreeSixty: UIViewController, VRPlayerDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        player.unload()
         
         // Don't forget to reset when view is being removed
         AppUtility.lockOrientation(.all)

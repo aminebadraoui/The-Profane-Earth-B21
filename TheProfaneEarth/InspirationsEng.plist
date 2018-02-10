@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>id</key>
+		<string>2</string>
+		<key>Title</key>
+		<string>My father 1932-2015:  Worn by Memory</string>
+		<key>Room</key>
+		<string>15972</string>
+		<key>Background</key>
+		<string>My father 1932-2015  Worn by Memory</string>
+	</dict>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>id</key>
+		<string>0</string>
+		<key>Title</key>
+		<string>The Blind Cathedral</string>
+		<key>Room</key>
+		<string>18968</string>
+		<key>Background</key>
+		<string>THE BLIND CATHEDRAL</string>
+	</dict>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>id</key>
+		<string>1</string>
+		<key>Title</key>
+		<string>The Equator Of Origins</string>
+		<key>Room</key>
+		<string>16887</string>
+		<key>Background</key>
+		<string>THE EQUATOR OF ORIGINS</string>
+	</dict>
+	<dict>
+		<key>Time</key>
+		<string></string>
+		<key>id</key>
+		<string>2</string>
+		<key>Title</key>
+		<string>A Church of Dusk and Yearning</string>
+		<key>Room</key>
+		<string>15979</string>
+		<key>Background</key>
+		<string>A Church of Dusk and Yearning</string>
+	</dict>
+</array>
+</plist>

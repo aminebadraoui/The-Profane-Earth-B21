@@ -17,12 +17,16 @@ class ChoiceVC: UIViewController {
     let videoURL = "https://s3.amazonaws.com/360degreemea/website video highlights 25.mp4"
     @IBOutlet weak var imageBg: UIImageView!
   
-//    @IBOutlet weak var videoTitle: UILabel!
+    @IBOutlet weak var chooseExp: UILabel!
+    //    @IBOutlet weak var videoTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        videoTitle.text = selectedVideo.title
         imageBg.image = selectedVideo.backgroundImage
         imageBg.addBlurEffect()
+        if (Language.lang == .French){
+            chooseExp.text = VideoDesc.EXPERIENCE_FR
+        }
         // Do any additional setup after loading the view.
     }
     @IBAction func triggerThreeSixty(_ sender: Any) {
@@ -44,7 +48,23 @@ class ChoiceVC: UIViewController {
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
         
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "cardboard" {
+             let destination1 = segue.destination as! OmniCardboard
+             destination1.selectedVideo = selectedVideo
+        }
+        if  segue.identifier == "threesixty" {
+            let destination2 = segue.destination as! OmniThreeSixty
+            destination2.selectedVideo = selectedVideo
+        }
+        
+       
+        
+        
+       
+        
+        
+    }
 
     /*
     // MARK: - Navigation

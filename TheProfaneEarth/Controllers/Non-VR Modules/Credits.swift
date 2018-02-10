@@ -8,27 +8,65 @@
 
 
 import UIKit
+import AVFoundation
 
 class Credits: UIViewController {
-
-    @IBOutlet weak var credits_ending: UILabel!
+    
+    var player: AVPlayer!
+    var playerLayer: AVPlayerLayer!
+    
+    @IBOutlet weak var CreationsTitle: UILabel!
+    
+    @IBOutlet weak var ExtraitTitle: UILabel!
+    
+    @IBOutlet weak var AideTitle: UILabel!
+    
+    @IBOutlet weak var MusiqueTitle: UILabel!
+    
+    @IBOutlet weak var productionTItle: UILabel!
+    
+    
     override func viewDidLoad() {
+        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mov")
+        player = AVPlayer.init(url: url!)
+        
+        playerLayer = AVPlayerLayer(player: player)
+        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.frame = self.view.layer.frame
+        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+        view.layer.insertSublayer(playerLayer, at: 0)
+        NotificationCenter.default.addObserver(self,selector: #selector(resetPlayer),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: self.player.currentItem) // Add observer
+        
         super.viewDidLoad()
         if(Language.lang == .English){
             
-            credits_ending.text = EndingCredits.ENDING_CREDITS_ENG
+            CreationsTitle.text = EndingCredits.CREATION_ENG
+            ExtraitTitle.text = EndingCredits.EXTRAIT_ENG
+            AideTitle.text = EndingCredits.AIDE_ENG
+            MusiqueTitle.text = EndingCredits.MUSIC_ENG
+            productionTItle.text = EndingCredits.BUILDING_ENG
+            
         }
         else{
-            credits_ending.text = EndingCredits.ENDING_CREDITS_FR
+            CreationsTitle.text = EndingCredits.CREATION_FR
+            ExtraitTitle.text = EndingCredits.EXTRAIT_FR
+            AideTitle.text = EndingCredits.AIDE_FR
+            MusiqueTitle.text = EndingCredits.MUSIC_FR
+            productionTItle.text = EndingCredits.BUILDING_FR
             
         }
         
 
         // Do any additional setup after loading the view.
     }
+    
+    func resetPlayer() {
+        self.player.seek(to: kCMTimeZero)
+        self.player.play()
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        player.play()
         //AppUtility.lockOrientation(.portrait)
         // Or to rotate and lock
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)

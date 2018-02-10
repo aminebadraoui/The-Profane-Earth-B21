@@ -20,31 +20,31 @@ class LangVC: UIViewController {
         super.viewDidLoad()
         
        
-        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mp4")
-        player = AVPlayer.init(url: url!)
-        
-        playerLayer = AVPlayerLayer(player: player)
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        playerLayer.frame = view.layer.frame
-        
-        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
-        
-        player.play()
-        
-        view.layer.insertSublayer(playerLayer, at: 0)
-        
-       
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(resetPlayer),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                                                         object: self.player.currentItem) // Add observer
+//        let url = Bundle.main.url(forResource: "video_bg_loop", withExtension: "mp4")
+//        player = AVPlayer.init(url: url!)
+//        
+//        playerLayer = AVPlayerLayer(player: player)
+//        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+//        playerLayer.frame = view.layer.frame
+//        
+//        player.actionAtItemEnd = AVPlayerActionAtItemEnd.none
+//        
+//        player.play()
+//        
+//        view.layer.insertSublayer(playerLayer, at: 0)
+//        
+//       
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(resetPlayer),
+//                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+//                                                         object: self.player.currentItem) // Add observer
    
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+       
         //AppUtility.lockOrientation(.portrait)
         // Or to rotate and lock
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)

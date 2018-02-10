@@ -9,11 +9,20 @@
 
 import Foundation
 import UIKit
+import Hero
 
 class Inspiration:Session{
+    
+
     class func allInspirations() -> [Inspiration] {
         var inspirations = [Inspiration]()
-        if let URL = Bundle.main.url(forResource: "Inspirations", withExtension: "plist") {
+        var inspirationName = "inspirations"
+        if (Language.lang == .English){
+            inspirationName = "InspirationsEng"
+        }else {
+            inspirationName = "InspirationsFR"
+        }
+        if let URL = Bundle.main.url(forResource: inspirationName, withExtension: "plist") {
             if let tutorialsFromPlist = NSArray(contentsOf: URL) {
                 for dictionary in tutorialsFromPlist {
                     let inspiration = Inspiration(dictionary: dictionary as! NSDictionary)

@@ -23,8 +23,8 @@ class PoemVC: UIViewController {
 
     
 
-    let poemEng:[String] = [Poem.LINE1_ENG,Poem.LINE2_ENG,Poem.LINE3_ENG,Poem.LINE4_ENG]
-    let poemFR:[String] = [Poem.LINE1_FR,Poem.LINE2_FR,Poem.LINE3_FR,Poem.LINE4_FR]
+    let poemEng:[String] = [Poem.LINE1_ENG,Poem.LINE1_2_ENG,Poem.LINE2_ENG,Poem.LINE3_ENG,Poem.LINE3_2_ENG,Poem.LINE3_3_ENG,Poem.LINE4_ENG,Poem.LINE5_ENG,Poem.LINE6_ENG,Poem.LINE7_ENG,Poem.LINE8_ENG,Poem.LINE9_ENG,Poem.LINE10_ENG,Poem.LINE11_ENG,Poem.LINE12_ENG,Poem.LINE13_ENG,Poem.LINE14_ENG,Poem.LINE15_ENG,Poem.LINE16_ENG ]
+    let poemFR:[String] = [Poem.LINE1_FR,Poem.LINE2_FR,Poem.LINE2_2_FR,Poem.LINE3_FR,Poem.LINE4_FR,Poem.LINE4_2_FR,Poem.LINE5_FR,Poem.LINE6_FR,Poem.LINE7_FR,Poem.LINE8_FR,Poem.LINE9_FR,Poem.LINE10_FR,Poem.LINE11_FR,Poem.LINE12_FR,Poem.LINE13_FR,Poem.LINE14_FR,Poem.LINE15_FR]
     
     
     

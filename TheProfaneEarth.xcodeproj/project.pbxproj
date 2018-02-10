@@ -19,15 +19,20 @@
 		96C613A11EB61BA1005331C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C613A01EB61BA1005331C3 /* Assets.xcassets */; };
 		96C613A41EB61BA1005331C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96C613A21EB61BA1005331C3 /* LaunchScreen.storyboard */; };
 		96C613AC1EB61BCD005331C3 /* InspirationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C613AB1EB61BCD005331C3 /* InspirationCell.swift */; };
-		96C613B01EB61C83005331C3 /* Inspirations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C613AF1EB61C83005331C3 /* Inspirations.plist */; };
+		96C613B01EB61C83005331C3 /* InspirationsEng.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96C613AF1EB61C83005331C3 /* InspirationsEng.plist */; };
 		DE00ABC920182EB300C42A48 /* OmniThreeSixty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00ABC820182EB300C42A48 /* OmniThreeSixty.swift */; };
 		DE0DE9F02013FFFE0053E70B /* Introduction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0DE9EF2013FFFE0053E70B /* Introduction.swift */; };
 		DE0DE9F2201400150053E70B /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0DE9F1201400150053E70B /* Credits.swift */; };
+		DE0E2245202BAAF300AB97A9 /* ZoomTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0E2244202BAAF300AB97A9 /* ZoomTransitioningDelegate.swift */; };
 		DE1120B62001B5ED00E68814 /* LangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1120B52001B5ED00E68814 /* LangVC.swift */; };
 		DE2C7397202A4668002C5FF0 /* SplashScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2C7396202A4668002C5FF0 /* SplashScreenVC.swift */; };
 		DE2C7399202A46B0002C5FF0 /* pexels-photo-326282.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = DE2C7398202A46AF002C5FF0 /* pexels-photo-326282.jpeg */; };
 		DE2C739B202A5442002C5FF0 /* Inspirations.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2C739A202A5442002C5FF0 /* Inspirations.xcassets */; };
 		DE361A8420226EA100C7296B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE361A8320226EA100C7296B /* Utilities.swift */; };
+		DE559F72202D234E00704F61 /* video_bg_loop.mov in Resources */ = {isa = PBXBuildFile; fileRef = DE559F71202D234E00704F61 /* video_bg_loop.mov */; };
+		DE559F74202E26B500704F61 /* InspirationsFR.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE559F73202E26B500704F61 /* InspirationsFR.plist */; };
+		DE559F76202E563B00704F61 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559F75202E563B00704F61 /* Contact.swift */; };
+		DE559F78202E577200704F61 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE559F77202E577200704F61 /* About.swift */; };
 		DEA2D986201826130089A87B /* OmniCardboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA2D985201826130089A87B /* OmniCardboard.swift */; };
 		DED6389D2001B869004DE974 /* Lang.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6389C2001B869004DE974 /* Lang.swift */; };
 		DED6389F2001BAA6004DE974 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED6389E2001BAA6004DE974 /* Constants.swift */; };
@@ -40,7 +45,6 @@
 		DEDF8EAF1FA7EA2200B3F3BF /* BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF8EAE1FA7EA2200B3F3BF /* BlurEffect.swift */; };
 		DEDF8EB11FA7F31700B3F3BF /* RoundBorders.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDF8EB01FA7F31700B3F3BF /* RoundBorders.swift */; };
 		DEEDB60C200A97B500F7DFC2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEEDB60B200A97B500F7DFC2 /* AVFoundation.framework */; };
-		DEEDB60E200A97EF00F7DFC2 /* video_bg_loop.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = DEEDB60D200A97EF00F7DFC2 /* video_bg_loop.mp4 */; };
 		DEEDB610200A9BCB00F7DFC2 /* VideoBG.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEDB60F200A9BCB00F7DFC2 /* VideoBG.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,16 +64,21 @@
 		96C613A31EB61BA1005331C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96C613A51EB61BA1005331C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C613AB1EB61BCD005331C3 /* InspirationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InspirationCell.swift; sourceTree = "<group>"; };
-		96C613AF1EB61C83005331C3 /* Inspirations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Inspirations.plist; sourceTree = "<group>"; };
+		96C613AF1EB61C83005331C3 /* InspirationsEng.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InspirationsEng.plist; sourceTree = "<group>"; };
 		98488328DEFF26DBD86EC2E7 /* Pods-TheProfaneEarth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheProfaneEarth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheProfaneEarth/Pods-TheProfaneEarth.debug.xcconfig"; sourceTree = "<group>"; };
 		DE00ABC820182EB300C42A48 /* OmniThreeSixty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniThreeSixty.swift; sourceTree = "<group>"; };
 		DE0DE9EF2013FFFE0053E70B /* Introduction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Introduction.swift; sourceTree = "<group>"; };
 		DE0DE9F1201400150053E70B /* Credits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		DE0E2244202BAAF300AB97A9 /* ZoomTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitioningDelegate.swift; sourceTree = "<group>"; };
 		DE1120B52001B5ED00E68814 /* LangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LangVC.swift; sourceTree = "<group>"; };
 		DE2C7396202A4668002C5FF0 /* SplashScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenVC.swift; sourceTree = "<group>"; };
 		DE2C7398202A46AF002C5FF0 /* pexels-photo-326282.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pexels-photo-326282.jpeg"; sourceTree = SOURCE_ROOT; };
 		DE2C739A202A5442002C5FF0 /* Inspirations.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Inspirations.xcassets; sourceTree = "<group>"; };
 		DE361A8320226EA100C7296B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		DE559F71202D234E00704F61 /* video_bg_loop.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video_bg_loop.mov; sourceTree = SOURCE_ROOT; };
+		DE559F73202E26B500704F61 /* InspirationsFR.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InspirationsFR.plist; sourceTree = "<group>"; };
+		DE559F75202E563B00704F61 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		DE559F77202E577200704F61 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		DEA2D985201826130089A87B /* OmniCardboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OmniCardboard.swift; sourceTree = "<group>"; };
 		DED6389C2001B869004DE974 /* Lang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lang.swift; sourceTree = "<group>"; };
 		DED6389E2001BAA6004DE974 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -82,7 +91,6 @@
 		DEDF8EAE1FA7EA2200B3F3BF /* BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffect.swift; sourceTree = "<group>"; };
 		DEDF8EB01FA7F31700B3F3BF /* RoundBorders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorders.swift; sourceTree = "<group>"; };
 		DEEDB60B200A97B500F7DFC2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DEEDB60D200A97EF00F7DFC2 /* video_bg_loop.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_bg_loop.mp4; sourceTree = SOURCE_ROOT; };
 		DEEDB60F200A9BCB00F7DFC2 /* VideoBG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBG.swift; sourceTree = "<group>"; };
 		DEF159061FEDB0060059634D /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		DEF159071FEDB0120059634D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +132,7 @@
 				964131521EB6241A009B2648 /* UIColor+Palette.swift */,
 				964131541EB624C2009B2648 /* UIImage+Decompression.swift */,
 				DEEDB60F200A9BCB00F7DFC2 /* VideoBG.swift */,
+				DE0E2244202BAAF300AB97A9 /* ZoomTransitioningDelegate.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -148,11 +157,12 @@
 		9641315C1EB626B6009B2648 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				DEEDB60D200A97EF00F7DFC2 /* video_bg_loop.mp4 */,
+				DE559F71202D234E00704F61 /* video_bg_loop.mov */,
 				DE2C7398202A46AF002C5FF0 /* pexels-photo-326282.jpeg */,
 				96C613A01EB61BA1005331C3 /* Assets.xcassets */,
 				DE2C739A202A5442002C5FF0 /* Inspirations.xcassets */,
-				96C613AF1EB61C83005331C3 /* Inspirations.plist */,
+				DE559F73202E26B500704F61 /* InspirationsFR.plist */,
+				96C613AF1EB61C83005331C3 /* InspirationsEng.plist */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -218,6 +228,8 @@
 				DE0DE9EF2013FFFE0053E70B /* Introduction.swift */,
 				DE0DE9F1201400150053E70B /* Credits.swift */,
 				DE2C7396202A4668002C5FF0 /* SplashScreenVC.swift */,
+				DE559F75202E563B00704F61 /* Contact.swift */,
+				DE559F77202E577200704F61 /* About.swift */,
 			);
 			path = "Non-VR Modules";
 			sourceTree = "<group>";
@@ -226,8 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				964131631EB62B0D009B2648 /* VideoListVC.swift */,
-				DEDF8EAC1FA7C2F200B3F3BF /* ChoosePlayerVC.swift */,
 				DEDF8EAA1FA7BE1200B3F3BF /* VideoDetailVC.swift */,
+				DEDF8EAC1FA7C2F200B3F3BF /* ChoosePlayerVC.swift */,
 				DEA2D985201826130089A87B /* OmniCardboard.swift */,
 				DE00ABC820182EB300C42A48 /* OmniThreeSixty.swift */,
 				DE44E2081FE877AA00378B28 /* Players */,
@@ -328,12 +340,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C613A41EB61BA1005331C3 /* LaunchScreen.storyboard in Resources */,
+				DE559F74202E26B500704F61 /* InspirationsFR.plist in Resources */,
+				DE559F72202D234E00704F61 /* video_bg_loop.mov in Resources */,
 				96C613A11EB61BA1005331C3 /* Assets.xcassets in Resources */,
 				DE2C7399202A46B0002C5FF0 /* pexels-photo-326282.jpeg in Resources */,
 				96C6139F1EB61BA1005331C3 /* Main.storyboard in Resources */,
 				DE2C739B202A5442002C5FF0 /* Inspirations.xcassets in Resources */,
-				DEEDB60E200A97EF00F7DFC2 /* video_bg_loop.mp4 in Resources */,
-				96C613B01EB61C83005331C3 /* Inspirations.plist in Resources */,
+				96C613B01EB61C83005331C3 /* InspirationsEng.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,10 +375,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheProfaneEarth/Pods-TheProfaneEarth-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${PODS_ROOT}/OmniVirtSDK/OmniVirtSDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OmniVirtSDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +418,7 @@
 				DEDF8EA71FA69F0500B3F3BF /* FadeInOut.swift in Sources */,
 				964131551EB624C2009B2648 /* UIImage+Decompression.swift in Sources */,
 				DEDF8EAD1FA7C2F200B3F3BF /* ChoosePlayerVC.swift in Sources */,
+				DE0E2245202BAAF300AB97A9 /* ZoomTransitioningDelegate.swift in Sources */,
 				964131641EB62B0D009B2648 /* VideoListVC.swift in Sources */,
 				DE0DE9F02013FFFE0053E70B /* Introduction.swift in Sources */,
 				DEA2D986201826130089A87B /* OmniCardboard.swift in Sources */,
@@ -417,6 +433,8 @@
 				DED6389D2001B869004DE974 /* Lang.swift in Sources */,
 				DE2C7397202A4668002C5FF0 /* SplashScreenVC.swift in Sources */,
 				DE1120B62001B5ED00E68814 /* LangVC.swift in Sources */,
+				DE559F78202E577200704F61 /* About.swift in Sources */,
+				DE559F76202E563B00704F61 /* Contact.swift in Sources */,
 				DEDF8EA31FA69EE200B3F3BF /* GeneralMenuVC.swift in Sources */,
 				DE00ABC920182EB300C42A48 /* OmniThreeSixty.swift in Sources */,
 				96C6139A1EB61BA1005331C3 /* AppDelegate.swift in Sources */,

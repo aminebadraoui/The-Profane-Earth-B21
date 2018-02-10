@@ -10,12 +10,21 @@ import UIKit
 
 class SplashScreenVC: UIViewController {
 
+    var activityIndicator:UIActivityIndicatorView = UIActivityIndicatorView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+        
+        perform(#selector(showNavController), with: nil, afterDelay: 3)
+       // UIApplication.shared.beginIgnoringInteractionEvents()
 
         // Do any additional setup after loading the view.
     }
 
+    func showNavController() {
+        performSegue(withIdentifier: "showApp", sender: self)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

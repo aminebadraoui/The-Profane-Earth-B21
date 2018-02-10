@@ -14,7 +14,9 @@ import AVKit
 private let reuseIdentifier = "Cell"
 
 class InspirationsViewController: UICollectionViewController {
+    @IBOutlet weak var msgFr: UILabel!
     var selectedVideoTitle : String = ""
+    var selectedIndexPath: IndexPath!
    let inspirations = Inspiration.allInspirations()
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -23,12 +25,17 @@ class InspirationsViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
         selectedVideoTitle = ""
         if let patternImage = UIImage(named: "Pattern") {
             view.backgroundColor = UIColor(patternImage: patternImage)
         }
         collectionView!.backgroundColor = UIColor.clear
         collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
+        
+        if(Language.lang == Lang.English){
+            msgFr.isHidden = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,6 +68,8 @@ extension InspirationsViewController {
     
  
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        self.selectedIndexPath = indexPath
         let layout = collectionViewLayout as! UltravisualLayout
         let offset = layout.dragOffset * CGFloat(indexPath.item)
         if collectionView.contentOffset.y != offset {
@@ -86,3 +95,6 @@ extension InspirationsViewController {
         AppUtility.lockOrientation(.all)
     }
 }
+
+
+

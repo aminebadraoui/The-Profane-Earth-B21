@@ -8,30 +8,38 @@
 
 
 import UIKit
+import Hero
 
 class InspirationCell: UICollectionViewCell {
     
     @IBOutlet fileprivate weak var imageView: UIImageView!
     @IBOutlet fileprivate weak var imageCoverView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var timeAndRoomLabel: UILabel!
-    @IBOutlet private weak var speakerLabel: UILabel!
+
     
+  
     var inspiration:Inspiration?{
         didSet{
+            
+        
             if let inspiration = inspiration{
+              
                 imageView.image = inspiration.backgroundImage
+    
                 titleLabel.text = inspiration.title
-                timeAndRoomLabel.text = inspiration.roomAndTime
-                speakerLabel.text = inspiration.speaker
+                
+               
+                
+                
             }
         }
     }
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
         super.apply(layoutAttributes)
         
-        titleLabel.sizeToFit()
-        titleLabel.numberOfLines = 2
+        titleLabel.adjustsFontSizeToFitWidth = true
+        titleLabel.sizeThatFits((titleLabel.superview?.frame.size)!)
+        titleLabel.numberOfLines = 0
         
         // 1
         let standardHeight = UltravisualLayoutConstants.Cell.standardHeight
@@ -44,8 +52,8 @@ class InspirationCell: UICollectionViewCell {
         let minAlpha: CGFloat = 0.3
         let maxAlpha: CGFloat = 0.75
         imageCoverView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
-        timeAndRoomLabel.alpha = 0
-        speakerLabel.alpha = delta
+        
+      
     }
 }
 
